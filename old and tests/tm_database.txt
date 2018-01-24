@@ -1,0 +1,1 @@
+{"ADMIN"=>{:index=>1, :tasklist=>["Napsat pan Bolina", "Urgovat pan Bogdány platba"]}, "ABENIN"=>{:index=>0, :tasklist=>["Napsat pan Bolina", "Urgovat pan Bogdány platba", "---dalŠÍ---"]}}
