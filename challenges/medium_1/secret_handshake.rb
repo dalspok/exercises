@@ -33,8 +33,7 @@ class SecretHandshake
   HANDSHAKES = ["wink", "double blink", "close your eyes", "jump"]
 
   def initialize(input)
-    @value = convert(input)
-    @values = to_array
+    @values = convert(input)
   end
 
   def commands
@@ -48,16 +47,13 @@ class SecretHandshake
 
   private
 
-  def to_array
-    @value.rjust(5, "0").chars
-  end
-
   def convert(input_value)
-    case input_value
-      when /\A[01]*\Z/ then input_value
-      when Integer then input_value.to_s(2)
-      else "0"
-    end
+    corrected_value = case input_value
+                        when /\A[01]*\Z/ then input_value
+                        when Integer then input_value.to_s(2)
+                        else "0"
+                      end
+    corrected_value.rjust(5, "0").chars
   end
 end
 
